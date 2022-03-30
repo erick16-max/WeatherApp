@@ -9,7 +9,7 @@ from matplotlib.style import context
 def index (request):
     if request.method == 'POST':
         city = request.POST['city']
-        API_KEY = "ff9352301b484cd506c0551c3ff65a96"
+        API_KEY = "" #enter API generetaed by the openweathermap after signied in
         BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
         request_url = f"{BASE_URL}?appid={API_KEY}&q={city}"
         res =requests.urlopen(request_url).read()
